@@ -1,0 +1,10 @@
+F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Entity\bin\Debug\Whf.TuoPu.Entity.dll
+F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Entity\bin\Debug\Whf.TuoPu.Entity.pdb
+F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Entity\obj\Debug\ResolveAssemblyReference.cache
+F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Entity\obj\Debug\Whf.TuoPu.Entity.dll
+F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Entity\obj\Debug\Whf.TuoPu.Entity.pdb
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Entity\bin\Debug\Whf.TuoPu.Entity.dll
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Entity\bin\Debug\Whf.TuoPu.Entity.pdb
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Entity\obj\Debug\ResolveAssemblyReference.cache
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Entity\obj\Debug\Whf.TuoPu.Entity.dll
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Entity\obj\Debug\Whf.TuoPu.Entity.pdb
