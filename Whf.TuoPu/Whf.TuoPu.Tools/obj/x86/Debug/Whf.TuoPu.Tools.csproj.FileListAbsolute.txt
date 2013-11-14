@@ -11,3 +11,6 @@ F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.exe
 F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.pdb
 F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Common.dll
 F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Common.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Tools.exe.config
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.exe
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.pdb

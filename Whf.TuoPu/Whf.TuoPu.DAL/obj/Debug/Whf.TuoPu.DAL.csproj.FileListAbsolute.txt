@@ -12,3 +12,10 @@ F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.DAL\bin\Debug\Whf.TuoPu.Common.pdb
 F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.DAL\obj\Debug\ResolveAssemblyReference.cache
 F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.DAL\obj\Debug\Whf.TuoPu.DAL.dll
 F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.DAL\obj\Debug\Whf.TuoPu.DAL.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\bin\Debug\Whf.TuoPu.DAL.dll
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\bin\Debug\Whf.TuoPu.DAL.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\bin\Debug\Whf.TuoPu.Common.dll
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\bin\Debug\Whf.TuoPu.Common.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\obj\Debug\ResolveAssemblyReference.cache
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\obj\Debug\Whf.TuoPu.DAL.dll
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.DAL\obj\Debug\Whf.TuoPu.DAL.pdb

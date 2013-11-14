@@ -20,7 +20,7 @@ namespace Whf.TuoPu.Controller
                                         personofficephone ,
                                         personmobilephone ,
                                         personemail ,
-                                        persondesc,personstatus,persontype 
+                                        personmemo,personstatus,persontype 
                                 FROM    TBLPERSON where personaccount=@UserName and personpassword=@PassWord";
             string[] paramName=new string[2];
             object[] paramValue = new object[2];
@@ -57,7 +57,7 @@ namespace Whf.TuoPu.Controller
                 pe.PERSONEMAIL = Convert.ToString(dr["personemail"]);
                 pe.PERSONMOBILEPHONE = Convert.ToString(dr["personmobilephone"]);
                 pe.PERSONOFFICEPHONE = Convert.ToString(dr["personofficephone"]);
-                pe.PERSONDESC = Convert.ToString(dr["persondesc"]);
+                pe.PERSONMEMO = Convert.ToString(dr["personmemo"]);
             }
             return pe;
         }
@@ -71,7 +71,7 @@ namespace Whf.TuoPu.Controller
                                         personofficephone ,
                                         personmobilephone ,
                                         personemail ,
-                                        persondesc
+                                        personmemo
                                 FROM    TBLPERSON where 1=1 ";
             if (!string.IsNullOrEmpty(userAccount))
             {

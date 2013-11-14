@@ -8,3 +8,8 @@ F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Common\bin\Debug\Whf.TuoPu.Common.pdb
 F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Common\obj\Debug\ResolveAssemblyReference.cache
 F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Common\obj\Debug\Whf.TuoPu.Common.dll
 F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Common\obj\Debug\Whf.TuoPu.Common.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Common\bin\Debug\Whf.TuoPu.Common.dll
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Common\bin\Debug\Whf.TuoPu.Common.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Common\obj\Debug\ResolveAssemblyReference.cache
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Common\obj\Debug\Whf.TuoPu.Common.dll
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Common\obj\Debug\Whf.TuoPu.Common.pdb
