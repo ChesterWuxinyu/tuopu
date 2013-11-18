@@ -14,3 +14,13 @@ F:\WorkSpace\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Common.pdb
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Tools.exe.config
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.exe
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Tools.exe
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Tools.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Common.dll
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Common.pdb
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.Form1.resources
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.GetData.resources
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.Properties.Resources.resources
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource.write.1.tlog

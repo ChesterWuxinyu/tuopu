@@ -19,50 +19,38 @@ namespace Whf.TuoPu.Controller
         /// <param name="funcName"></param>
         /// <param name="level"></param>
         /// <returns></returns>
-        public DataSet QueryFunctions(int pageIndex, int pageSize, out int rowCount, string pFuncName, string funcName, string level)
+        public DataSet QueryFunctions(string funcCode,string funcName)
         {
-            string strSql = @" SELECT  c.oid ,
-                                    p.functionname AS PFucnName ,
-                                    c.functionname AS funcName ,
-                                    c.functionlevel ,
-                                    c.functionstatus ,
-                                    c.functionurl ,
-                                    c.memo
-                            FROM    dbo.TBLFUNCTION c
-                                    LEFT JOIN dbo.TBLFUNCTION p ON c.functionparentid = p.oid
+            string strSql = @" SELECT  *
+                            FROM    dbo.TBLFUNCTION 
                             WHERE   1 = 1 ";
-            if (!string.IsNullOrEmpty(pFuncName))
+            if (!string.IsNullOrEmpty(funcCode))
             {
-                strSql += " and p.functionname like @PFuncName ";
+                strSql += " and p.functionkey = FunCode ";
             }
             if (!string.IsNullOrEmpty(funcName))
             {
-                strSql += " and c.functionname like @FuncName ";
+                strSql += " and p.functionname = FunName ";
             }
-            if (!string.IsNullOrEmpty(level))
-            {
-                strSql += " and c.functionlevel = @FuncLevel ";
-            }
-            string[] paramNames = new string[3];
-            object[] paramValues = new object[3];
+            strSql += " ORDER BY functionorder ";
+            string[] paramNames = new string[2];
+            object[] paramValues = new object[2];
 
-            paramNames[0] = "PFuncName";
-            paramNames[1] = "FuncName";
-            paramNames[2] = "FuncLevel";
+            paramNames[0] = "FunCode";
+            paramNames[1] = "FunName";
 
-            paramValues[0] = "%" + pFuncName + "%";
-            paramValues[1] = "%" + funcName + "%";
-            paramValues[2] = level;
+            paramValues[0] = funcCode;
+            paramValues[1] = funcName;
             SqlDBBroker broker = new SqlDBBroker();
             broker.Open();
-            DataSet dst = broker.QueryPageFromSql(strSql, paramNames, paramValues, pageIndex, pageSize, out rowCount);
+            DataSet dst = broker.ExecuteDataset(strSql);
             broker.Close();
             return dst;
         }
 
         public DataSet GetAllFunctions()
         {
-            string strSql = " SELECT * FROM TBLFUNCTION ";
+            string strSql = " SELECT * FROM TBLFUNCTION  ORDER BY functionorder ";
             SqlDBBroker broker = new SqlDBBroker();
             broker.Open();
             DataSet dst = broker.ExecuteDataset(strSql);

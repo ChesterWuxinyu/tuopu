@@ -31,6 +31,24 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
+        /// lblFunCode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFunCode;
+        
+        /// <summary>
+        /// txtFunCode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFunCode;
+        
+        /// <summary>
         /// lblFunName 控件。
         /// </summary>
         /// <remarks>
@@ -49,42 +67,6 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.TextBox txtFunName;
         
         /// <summary>
-        /// lblPFunName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPFunName;
-        
-        /// <summary>
-        /// txtPFunName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPFunName;
-        
-        /// <summary>
-        /// lblLevel 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLevel;
-        
-        /// <summary>
-        /// txtLevel 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLevel;
-        
-        /// <summary>
         /// btnQuery 控件。
         /// </summary>
         /// <remarks>
@@ -94,22 +76,121 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.Button btnQuery;
         
         /// <summary>
-        /// gvTest 控件。
+        /// tvMenu 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTest;
+        protected global::System.Web.UI.WebControls.TreeView tvMenu;
         
         /// <summary>
-        /// Navigator 控件。
+        /// lblFuncCode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Whf.TuoPu.Web.Controls.Navigator Navigator;
+        protected global::System.Web.UI.WebControls.Label lblFuncCode;
+        
+        /// <summary>
+        /// txtFuncCode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFuncCode;
+        
+        /// <summary>
+        /// lblFuncName 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFuncName;
+        
+        /// <summary>
+        /// txtFuncName 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFuncName;
+        
+        /// <summary>
+        /// lblFuncUrl 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFuncUrl;
+        
+        /// <summary>
+        /// txtFuncUrl 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFuncUrl;
+        
+        /// <summary>
+        /// lblFuncStatus 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFuncStatus;
+        
+        /// <summary>
+        /// drpFuncStatus 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpFuncStatus;
+        
+        /// <summary>
+        /// lblFuncOrder 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFuncOrder;
+        
+        /// <summary>
+        /// txtFuncOrder 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFuncOrder;
+        
+        /// <summary>
+        /// lblFuncMemo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFuncMemo;
+        
+        /// <summary>
+        /// txtFuncMemo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFuncMemo;
         
         /// <summary>
         /// btnAdd 控件。
@@ -119,5 +200,14 @@ namespace Whf.TuoPu.Web.BasicData {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// btnSave 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

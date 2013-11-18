@@ -21,6 +21,29 @@ namespace Whf.TuoPu.Web.Portal
             }
         }
 
+        protected override void OnInit(EventArgs e)
+        {
+            //this.tvMenu.TreeNodeCollapsed += new TreeNodeEventHandler(tvMenu_TreeNodeCollapsed);
+            //this.tvMenu.TreeNodeExpanded += new TreeNodeEventHandler(tvMenu_TreeNodeExpanded);
+            base.OnInit(e);
+        }
+
+        //private void tvMenu_TreeNodeExpanded(object sender, TreeNodeEventArgs e)
+        //{
+        //    if (e.Node != null)
+        //    {
+        //        e.Node.ImageUrl = @"..\images\icons\Open.gif";
+        //    }
+        //}
+
+        //private void tvMenu_TreeNodeCollapsed(object sender, TreeNodeEventArgs e)
+        //{
+        //    if (e.Node != null)
+        //    {
+        //        e.Node.ImageUrl = @"..\images\icons\TreeViewClose.gif";
+        //    }
+        //}
+
         private void BindTree()
         {
             FunctionController controller = new FunctionController();
@@ -44,7 +67,6 @@ namespace Whf.TuoPu.Web.Portal
                         node.Text = Convert.ToString(dr["functionname"]);
                         node.Value = Convert.ToString(dr["oid"]);
                         node.NavigateUrl = Convert.ToString(dr["functionurl"]);
-                        node.Target = "main";
                         this.BindChildNode(dstMenu, node);
                         this.tvMenu.Nodes.Add(node);
                     }
@@ -67,8 +89,8 @@ namespace Whf.TuoPu.Web.Portal
                         node.Value = Convert.ToString(dr["oid"]);
                         node.NavigateUrl = Convert.ToString(dr["functionurl"]);
                         node.Target = "main";
-                        this.BindChildNode(dstMenu, node);
                         parNode.ChildNodes.Add(node);
+                        this.BindChildNode(dstMenu, node);
                     }
                 }
             }

@@ -16,37 +16,64 @@ namespace Whf.TuoPu.Web.BasicData
         {
             if (!IsPostBack)
             {
-                this.BindGrid(1);
+                this.BindTree();
             }
         }
 
         protected override void OnInit(EventArgs e)
         {
             this.btnQuery.Click += new EventHandler(btnQuery_Click);
-            this.Navigator.Paging += new Web.Controls.Navigator.PagingEventHandler(Navigator_Paging);
+            this.tvMenu.SelectedNodeChanged += new EventHandler(tvMenu_SelectedNodeChanged);
             base.OnInit(e);
+        }
+
+        private void tvMenu_SelectedNodeChanged(object sender, EventArgs e)
+        {
+            TreeNode selectedNode = this.tvMenu.SelectedNode;
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            this.BindGrid(1);
+            this.BindTree();
         }
 
-        private void Navigator_Paging(object sender, Controls.Navigator.PagingEventArgs e)
-        {
-            this.BindGrid(e.NewPage);
-        }
         #endregion
 
         #region 方法
-        private void BindGrid(int pageIndex)
+        private void BindTree()
         {
             FunctionController controller = new FunctionController();
-            int rowCount = 0;
-            DataSet dst = controller.QueryFunctions(pageIndex, 10, out rowCount,this.txtPFunName.Text.Trim(),this.txtFunName.Text.Trim(),this.txtLevel.Text.Trim());
-            this.Navigator.TotalCount = rowCount;
-            this.gvTest.DataSource = dst.Tables[0];
-            this.gvTest.DataBind();
+            DataSet dstMenu = controller.QueryFunctions(this.txtFunCode.Text.Trim(), this.txtFunName.Text.Trim());
+            TreeNode node = new TreeNode();
+            node.Text = "系统功能";
+            node.Value = "0";
+            node.NavigateUrl = "";
+            this.tvMenu.Nodes.Add(node);
+            if (dstMenu != null && dstMenu.Tables[0].Rows.Count > 0)
+            {
+                this.BindChildNode(dstMenu, node);
+            }
+        }
+
+        private void BindChildNode(DataSet dstMenu, TreeNode parNode)
+        {
+            if (parNode != null && dstMenu != null)
+            {
+                string parID = parNode.Value;
+                DataRow[] drs = dstMenu.Tables[0].Select(string.Format("functionparentid='{0}'", parID));
+                if (drs.Length > 0)
+                {
+                    foreach (DataRow dr in drs)
+                    {
+                        TreeNode node = new TreeNode();
+                        node.Text = Convert.ToString(dr["functionname"]);
+                        node.Value = Convert.ToString(dr["oid"]);
+                        node.NavigateUrl = "";
+                        parNode.ChildNodes.Add(node);
+                        this.BindChildNode(dstMenu, node);
+                    }
+                }
+            }
         }
         #endregion
     }

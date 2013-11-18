@@ -43,7 +43,7 @@
                             <asp:BoundField DataField="personofficephone" HeaderText="办公电话" />
                             <asp:BoundField DataField="personmobilephone" HeaderText="移动电话" />
                             <asp:BoundField DataField="personemail" HeaderText="电子邮件" />
-                            <asp:BoundField DataField="persondesc" HeaderText="备注信息" />
+                            <asp:BoundField DataField="personmemo" HeaderText="备注信息" />
                         </Columns>
                         <HeaderStyle CssClass="gridview_header" />
                         <RowStyle CssClass="gridview_row" />
