@@ -21,21 +21,21 @@
                 <table class="TableMain" cellpadding="0" cellspacing="0">
                     <tr>
                         <td class="TDLabel">
-                            <asp:Label ID="lblFunCode" CssClass="LabelTitle" Text="菜单编码" runat="server"></asp:Label>
+                            <asp:Label ID="lblQueryFunCode" CssClass="LabelTitle" Text="菜单编码" runat="server"></asp:Label>
                         </td>
                         <td class="TDValue">
-                            <asp:TextBox ID="txtFunCode" CssClass="TextBoxMain160" runat="server">
+                            <asp:TextBox ID="txtQueryFunCode" CssClass="TextBoxMain160" runat="server">
                             </asp:TextBox>
                         </td>
                         <td class="TDLabel">
-                            <asp:Label ID="lblFunName" CssClass="LabelTitle" Text="菜单名称" runat="server"></asp:Label>
+                            <asp:Label ID="lblQueryFunName" CssClass="LabelTitle" Text="菜单名称" runat="server"></asp:Label>
                         </td>
                         <td class="TDValue">
-                            <asp:TextBox ID="txtFunName" runat="server" CssClass="TextBoxMain160">
+                            <asp:TextBox ID="txtQueryFunName" runat="server" CssClass="TextBoxMain160">
                             </asp:TextBox>
                         </td>
-                        <td width="4"></td>
-                        <td align="right">
+                        <td width="100"></td>
+                        <td align="left">
                             <asp:Button ID="btnQuery" runat="server" Text="查询" CssClass="ButtonMain" />
                         </td>
                     </tr>
@@ -67,9 +67,10 @@
                                     <td class="TDValue">
                                         <asp:TextBox ID="txtFuncCode" CssClass="TextBoxMain160" runat="server">
                                         </asp:TextBox></td>
+                                    <td width="50%"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="4"></td>
+                                    <td colspan="4" height="4"></td>
                                 </tr>
                                 <tr>
                                     <td class="TDLabel">
@@ -79,9 +80,10 @@
                                     <td class="TDValue">
                                         <asp:TextBox ID="txtFuncName" CssClass="TextBoxMain160" runat="server">
                                         </asp:TextBox></td>
+                                    <td width="50%"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="4"></td>
+                                    <td colspan="4" height="4"></td>
                                 </tr>
                                 <tr>
                                     <td class="TDLabel">
@@ -91,9 +93,10 @@
                                     <td class="TDValue">
                                         <asp:TextBox ID="txtFuncUrl" CssClass="TextBoxMain160" runat="server">
                                         </asp:TextBox></td>
+                                    <td width="50%"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="4"></td>
+                                    <td colspan="4" height="4"></td>
                                 </tr>
                                 <tr>
                                     <td class="TDLabel">
@@ -103,9 +106,10 @@
                                     <td class="TDValue">
                                         <asp:DropDownList ID="drpFuncStatus" CssClass="DropDownListMain160" runat="server">
                                         </asp:DropDownList></td>
+                                    <td width="50%"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="4"></td>
+                                    <td colspan="4" height="4"></td>
                                 </tr>
                                 <tr>
                                     <td class="TDLabel" align="right">
@@ -115,9 +119,10 @@
                                     <td class="TDValue" align="left">
                                         <asp:TextBox ID="txtFuncOrder" CssClass="TextBoxMain160" runat="server">
                                         </asp:TextBox></td>
+                                    <td width="50%"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="4"></td>
+                                    <td colspan="4" height="4"></td>
                                 </tr>
                                 <tr>
                                     <td class="TDLabel">
@@ -127,12 +132,13 @@
                                     <td class="TDValue">
                                         <asp:TextBox ID="txtFuncMemo" CssClass="TextBoxMain160" runat="server">
                                         </asp:TextBox></td>
+                                    <td width="50%"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="4"></td>
+                                    <td colspan="4" height="4"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" height="30%"></td>
+                                    <td colspan="4" height="30%"></td>
                                 </tr>
                             </table>
                         </td>
@@ -144,6 +150,13 @@
             <td class="TDOperate">
                 <asp:Button ID="btnAdd" runat="server" Text="新增" CssClass="ButtonMain" />
                 <asp:Button ID="btnSave" runat="server" Text="保存" CssClass="ButtonMain" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:HiddenField id="hdfOID" runat="server">
+                </asp:HiddenField>
+                
             </td>
         </tr>
     </table>

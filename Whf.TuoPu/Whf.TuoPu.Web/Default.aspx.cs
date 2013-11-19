@@ -53,7 +53,7 @@ namespace Whf.TuoPu.Web
                 return;
             }
             base.PersonEntity = pe;
-            Response.Redirect("Portal/index.aspx");
+            Response.Redirect("Portal/index.html");
         }
     }
 }

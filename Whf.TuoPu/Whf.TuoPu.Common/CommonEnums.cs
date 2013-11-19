@@ -52,7 +52,7 @@ namespace Whf.TuoPu.Common
     /// <summary>
     /// 人员状态
     /// </summary>
-    public enum PersonStatus
+    public enum CommonStatus
     { 
         /// <summary>
         /// 启用

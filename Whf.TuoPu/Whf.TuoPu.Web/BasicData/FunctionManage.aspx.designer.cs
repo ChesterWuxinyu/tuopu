@@ -31,40 +31,40 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
-        /// lblFunCode 控件。
+        /// lblQueryFunCode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFunCode;
+        protected global::System.Web.UI.WebControls.Label lblQueryFunCode;
         
         /// <summary>
-        /// txtFunCode 控件。
+        /// txtQueryFunCode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFunCode;
+        protected global::System.Web.UI.WebControls.TextBox txtQueryFunCode;
         
         /// <summary>
-        /// lblFunName 控件。
+        /// lblQueryFunName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFunName;
+        protected global::System.Web.UI.WebControls.Label lblQueryFunName;
         
         /// <summary>
-        /// txtFunName 控件。
+        /// txtQueryFunName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFunName;
+        protected global::System.Web.UI.WebControls.TextBox txtQueryFunName;
         
         /// <summary>
         /// btnQuery 控件。
@@ -209,5 +209,14 @@ namespace Whf.TuoPu.Web.BasicData {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSave;
+        
+        /// <summary>
+        /// hdfOID 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdfOID;
     }
 }

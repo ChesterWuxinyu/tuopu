@@ -8,9 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace Whf.TuoPu.Web.BasicData {
-    
-    
-    public partial class EditFunction {
+
+
+    public partial class Editperson
+    {
         
         /// <summary>
         /// form1 控件。

@@ -13,6 +13,7 @@
     <RootNamespace>Whf.TuoPu.Web</RootNamespace>
     <AssemblyName>Whf.TuoPu.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,7 +51,7 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BasicData\EditFunction.aspx" />
+    <Content Include="BasicData\Editperson.aspx" />
     <Content Include="BasicData\FunctionManage.aspx" />
     <Content Include="BasicData\PersonManage.aspx" />
     <Content Include="Controls\Navigator.ascx" />
@@ -83,12 +84,11 @@
     <Content Include="images\Open.gif" />
     <Content Include="images\right.gif" />
     <Content Include="images\right1.gif" />
-    <Content Include="Portal\bottom.aspx" />
-    <Content Include="Portal\index.aspx" />
+    <Content Include="Portal\bottom.html" />
+    <Content Include="Portal\index.html" />
     <Content Include="Portal\Left.aspx" />
-    <Content Include="Portal\middle.aspx" />
+    <Content Include="Portal\middle.html" />
     <Content Include="Portal\Top.aspx" />
-    <Content Include="Portal\top1.aspx" />
     <Content Include="Portal\ValidationCode.aspx" />
     <Content Include="RedirectPage.aspx" />
     <Content Include="Script\jquery.js" />
@@ -107,12 +107,12 @@
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BasicData\EditFunction.aspx.cs">
-      <DependentUpon>EditFunction.aspx</DependentUpon>
+    <Compile Include="BasicData\Editperson.aspx.cs">
+      <DependentUpon>Editperson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BasicData\EditFunction.aspx.designer.cs">
-      <DependentUpon>EditFunction.aspx</DependentUpon>
+    <Compile Include="BasicData\Editperson.aspx.designer.cs">
+      <DependentUpon>Editperson.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasicData\FunctionManage.aspx.cs">
       <DependentUpon>FunctionManage.aspx</DependentUpon>

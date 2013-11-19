@@ -15,7 +15,6 @@ namespace Whf.TuoPu.Entity
 		private int m_FUNCTIONORDER;
 		private int m_FUNCTIONTYPE;
 		private string m_FUNCTIONKEY;
-		private int m_FUNCTIONCATALOG;
 		private string m_FUNCTIONNAME;
 		private string m_MEMO;
 		private string m_CUSER;
@@ -148,21 +147,6 @@ namespace Whf.TuoPu.Entity
 			set
 			{
 				m_FUNCTIONKEY = value ;
-			}
-		}
-		
-		/// <summary>
-		/// FUNCTIONCATALOG
-		/// </summary>
-		public int FUNCTIONCATALOG
-		{
-			get
-			{
-				return m_FUNCTIONCATALOG ;
-			}
-			set
-			{
-				m_FUNCTIONCATALOG = value ;
 			}
 		}
 		

@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Whf.TuoPu.Controller;
 using System.Data;
+using Whf.TuoPu.Common;
+using Whf.TuoPu.Entity;
 
 namespace Whf.TuoPu.Web.BasicData
 {
@@ -17,6 +19,7 @@ namespace Whf.TuoPu.Web.BasicData
             if (!IsPostBack)
             {
                 this.BindTree();
+                this.BindDropdownList();
             }
         }
 
@@ -30,20 +33,53 @@ namespace Whf.TuoPu.Web.BasicData
         private void tvMenu_SelectedNodeChanged(object sender, EventArgs e)
         {
             TreeNode selectedNode = this.tvMenu.SelectedNode;
+            if (selectedNode.Value == "0")
+            {
+                btnSave.Visible = false;
+            }
+            else
+            {
+                FunctionEntity fun = new FunctionController().GetFunc(selectedNode.Value);
+                if (fun != null)
+                {
+                    txtFuncCode.Text = fun.FUNCTIONKEY;
+                    txtFuncMemo.Text = fun.MEMO;
+                    txtFuncName.Text = fun.FUNCTIONNAME;
+                    txtFuncOrder.Text = fun.FUNCTIONORDER.ToString();
+                    txtFuncUrl.Text = fun.FUNCTIONURL;
+                }
+            }
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
             this.BindTree();
         }
+        #endregion
 
+        #region 操作
+        
         #endregion
 
         #region 方法
+        private void BindDropdownList()
+        {
+            this.drpFuncStatus.Items.Clear();
+            ListItem lst1 = new ListItem();
+            lst1.Text = CommonMessage.EnableStatus;
+            lst1.Value = CommonStatus.Enable.GetHashCode().ToString();
+            this.drpFuncStatus.Items.Add(lst1);
+
+            ListItem lst2 = new ListItem();
+            lst2.Text = CommonMessage.DisableStatus;
+            lst2.Value = CommonStatus.Disable.GetHashCode().ToString();
+            this.drpFuncStatus.Items.Add(lst2);
+        }
+
         private void BindTree()
         {
             FunctionController controller = new FunctionController();
-            DataSet dstMenu = controller.QueryFunctions(this.txtFunCode.Text.Trim(), this.txtFunName.Text.Trim());
+            DataSet dstMenu = controller.QueryFunctions(this.txtQueryFunCode.Text.Trim(), this.txtQueryFunName.Text.Trim());
             TreeNode node = new TreeNode();
             node.Text = "系统功能";
             node.Value = "0";

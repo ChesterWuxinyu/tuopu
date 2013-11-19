@@ -60,11 +60,11 @@ namespace Whf.TuoPu.Common
         /// <summary>
         /// 获取Session中的PersonType
         /// </summary>
-        public static PersonStatus CurrentPersonStatus
+        public static CommonStatus CurrentPersonStatus
         {
             get
             {
-                return (PersonStatus)Convert.ToInt32(HttpContext.Current.Session["PersonStatus"].ToString());
+                return (CommonStatus)Convert.ToInt32(HttpContext.Current.Session["PersonStatus"].ToString());
             }
         }
     }

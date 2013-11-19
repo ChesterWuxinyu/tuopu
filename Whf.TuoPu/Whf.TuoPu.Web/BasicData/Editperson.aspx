@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditFunction.aspx.cs" Inherits="Whf.TuoPu.Web.BasicData.EditFunction" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Editperson.aspx.cs" Inherits="Whf.TuoPu.Web.BasicData.Editperson" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html xmlns="http://www.w3.org/1999/xhtml">
