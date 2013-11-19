@@ -46,7 +46,7 @@
             <td class="TDMain" align="center">
                 <table width="90%" height="90%">
                     <tr>
-                        <td width="15%" valign="top" style="border: #ababab 1px solid;">
+                        <td width="20%" valign="top" style="border: #ababab 1px solid;">
                             <asp:TreeView ID="tvMenu" runat="server">
                                 <hovernodestyle font-underline="True" forecolor="#6666AA" />
                                 <nodestyle font-names="Tahoma" font-size="8pt" forecolor="Black" horizontalpadding="2px"
@@ -57,7 +57,7 @@
                             </asp:TreeView>
                         </td>
                         <td width="10px"></td>
-                        <td width="85%">
+                        <td width="80%">
                             <table class="TableMain">
                                 <tr>
                                     <td class="TDLabel">
@@ -65,7 +65,7 @@
                                     </td>
                                     <td class="TDSperate"></td>
                                     <td class="TDValue">
-                                        <asp:TextBox ID="txtFuncCode" CssClass="TextBoxMain160" runat="server">
+                                        <asp:TextBox ID="txtFuncCode" CssClass="TextBoxMain300" runat="server">
                                         </asp:TextBox></td>
                                     <td width="50%"></td>
                                 </tr>
@@ -78,7 +78,7 @@
                                     </td>
                                     <td class="TDSperate"></td>
                                     <td class="TDValue">
-                                        <asp:TextBox ID="txtFuncName" CssClass="TextBoxMain160" runat="server">
+                                        <asp:TextBox ID="txtFuncName" CssClass="TextBoxMain300" runat="server">
                                         </asp:TextBox></td>
                                     <td width="50%"></td>
                                 </tr>
@@ -87,11 +87,11 @@
                                 </tr>
                                 <tr>
                                     <td class="TDLabel">
-                                        <asp:Label ID="lblFuncUrl" Text="菜单地址" CssClass="LabelTitle" runat="server"></asp:Label>
+                                        <asp:Label ID="lblFuncLevel" Text="菜单层级" CssClass="LabelTitle" runat="server"></asp:Label>
                                     </td>
                                     <td class="TDSperate"></td>
                                     <td class="TDValue">
-                                        <asp:TextBox ID="txtFuncUrl" CssClass="TextBoxMain160" runat="server">
+                                        <asp:TextBox ID="txtFuncLevel" Enabled="false" CssClass="TextBoxMain300" runat="server">
                                         </asp:TextBox></td>
                                     <td width="50%"></td>
                                 </tr>
@@ -117,7 +117,7 @@
                                     </td>
                                     <td class="TDSperate"></td>
                                     <td class="TDValue" align="left">
-                                        <asp:TextBox ID="txtFuncOrder" CssClass="TextBoxMain160" runat="server">
+                                        <asp:TextBox ID="txtFuncOrder" CssClass="TextBoxMain300" runat="server">
                                         </asp:TextBox></td>
                                     <td width="50%"></td>
                                 </tr>
@@ -130,7 +130,17 @@
                                     </td>
                                     <td class="TDSperate"></td>
                                     <td class="TDValue">
-                                        <asp:TextBox ID="txtFuncMemo" CssClass="TextBoxMain160" runat="server">
+                                        <asp:TextBox ID="txtFuncMemo" CssClass="TextBoxMain300" runat="server">
+                                        </asp:TextBox></td>
+                                    <td width="50%"></td>
+                                </tr>
+                                 <tr>
+                                    <td class="TDLabel">
+                                        <asp:Label ID="lblFuncUrl" Text="菜单地址" CssClass="LabelTitle" runat="server"></asp:Label>
+                                    </td>
+                                    <td class="TDSperate"></td>
+                                    <td class="TDValue">
+                                        <asp:TextBox ID="txtFuncUrl" CssClass="TextBoxMain300" runat="server">
                                         </asp:TextBox></td>
                                     <td width="50%"></td>
                                 </tr>
@@ -150,13 +160,13 @@
             <td class="TDOperate">
                 <asp:Button ID="btnAdd" runat="server" Text="新增" CssClass="ButtonMain" />
                 <asp:Button ID="btnSave" runat="server" Text="保存" CssClass="ButtonMain" />
+                <asp:Button ID="btnDelete" runat="server" Text="删除" CssClass="ButtonMain" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:HiddenField id="hdfOID" runat="server">
-                </asp:HiddenField>
-                
+                <asp:HiddenField id="hdfOID" runat="server"></asp:HiddenField>
+                <asp:HiddenField ID="hfParentOID" runat="server" />
             </td>
         </tr>
     </table>

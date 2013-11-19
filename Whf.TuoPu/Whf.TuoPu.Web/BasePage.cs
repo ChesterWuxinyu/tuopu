@@ -22,5 +22,11 @@ namespace Whf.TuoPu.Web
         {
             base.OnLoad(e);
         }
+
+        protected void ShowMessage(string msg)
+        {
+            string strScript = string.Format("alert('{0}')",msg);
+            base.ClientScript.RegisterStartupScript(this.GetType(), "ShowMessage", strScript, true);
+        }
     }
 }

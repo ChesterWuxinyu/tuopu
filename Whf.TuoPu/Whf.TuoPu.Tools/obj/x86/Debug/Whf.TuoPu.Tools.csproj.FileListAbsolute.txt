@@ -22,5 +22,5 @@ F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\ResolveAssemblyRefer
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.Form1.resources
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.GetData.resources
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.Properties.Resources.resources
-F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource.read.1.tlog
-F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog

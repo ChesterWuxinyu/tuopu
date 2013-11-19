@@ -15,6 +15,19 @@ namespace Whf.TuoPu.Controller
         #endregion
 
         #region 查询
+        public string GetChildMaxOrder(string oid)
+        {
+            string strSQL = @" SELECT COUNT(1)+1 FROM TBLFUNCTION WHERE functionparentid=@OID ";
+            string[] paramNames = new string[1];
+            object[] paramValues = new object[1];
+
+            paramNames[0] = "OID";
+            paramValues[0] = oid;
+            SqlDBBroker broker = new SqlDBBroker();
+            broker.Open();
+            return broker.ExecuteScalar(strSQL, CommandType.Text, paramNames, paramValues);
+        }
+
         public FunctionEntity GetFunc(string oid)
         {
             string strSQL = @" SELECT * FROM TBLFUNCTION WHERE oid=@OID ";

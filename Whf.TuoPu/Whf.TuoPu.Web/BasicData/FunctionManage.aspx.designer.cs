@@ -121,22 +121,22 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.TextBox txtFuncName;
         
         /// <summary>
-        /// lblFuncUrl 控件。
+        /// lblFuncLevel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFuncUrl;
+        protected global::System.Web.UI.WebControls.Label lblFuncLevel;
         
         /// <summary>
-        /// txtFuncUrl 控件。
+        /// txtFuncLevel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFuncUrl;
+        protected global::System.Web.UI.WebControls.TextBox txtFuncLevel;
         
         /// <summary>
         /// lblFuncStatus 控件。
@@ -193,6 +193,24 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.TextBox txtFuncMemo;
         
         /// <summary>
+        /// lblFuncUrl 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFuncUrl;
+        
+        /// <summary>
+        /// txtFuncUrl 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFuncUrl;
+        
+        /// <summary>
         /// btnAdd 控件。
         /// </summary>
         /// <remarks>
@@ -211,6 +229,15 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.Button btnSave;
         
         /// <summary>
+        /// btnDelete 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
         /// hdfOID 控件。
         /// </summary>
         /// <remarks>
@@ -218,5 +245,14 @@ namespace Whf.TuoPu.Web.BasicData {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdfOID;
+        
+        /// <summary>
+        /// hfParentOID 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfParentOID;
     }
 }

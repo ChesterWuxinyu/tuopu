@@ -27,6 +27,7 @@ namespace Whf.TuoPu.Web.BasicData
         {
             this.btnQuery.Click += new EventHandler(btnQuery_Click);
             this.tvMenu.SelectedNodeChanged += new EventHandler(tvMenu_SelectedNodeChanged);
+            this.btnAdd.Click += new EventHandler(btnAdd_Click);
             base.OnInit(e);
         }
 
@@ -42,11 +43,13 @@ namespace Whf.TuoPu.Web.BasicData
                 FunctionEntity fun = new FunctionController().GetFunc(selectedNode.Value);
                 if (fun != null)
                 {
+                    hdfOID.Value = selectedNode.Value;
                     txtFuncCode.Text = fun.FUNCTIONKEY;
                     txtFuncMemo.Text = fun.MEMO;
                     txtFuncName.Text = fun.FUNCTIONNAME;
                     txtFuncOrder.Text = fun.FUNCTIONORDER.ToString();
                     txtFuncUrl.Text = fun.FUNCTIONURL;
+                    txtFuncLevel.Text = fun.FUNCTIONLEVEL.ToString();
                 }
             }
         }
@@ -58,7 +61,31 @@ namespace Whf.TuoPu.Web.BasicData
         #endregion
 
         #region 操作
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            TreeNode selectedNode = this.tvMenu.SelectedNode;
+            if (selectedNode==null)
+            {
+                base.ShowMessage("请选择上一级菜单！");
+                return;
+            }
+            else if (selectedNode.Value != null)
+            {
+                this.ClearAllControls();
+                txtFuncLevel.Text = (Convert.ToInt32(txtFuncLevel.Text) + 1).ToString();
+                txtFuncOrder.Text = new FunctionController().GetChildMaxOrder(selectedNode.Value);
+            }
+        }
+
+        private void ClearAllControls()
+        {
+            this.hdfOID.Value = "";
+            this.txtFuncCode.Text = "";
+            this.txtFuncMemo.Text = "";
+            this.txtFuncName.Text = "";
+            this.txtFuncOrder.Text = "";
+            this.txtFuncUrl.Text = "";
+        }
         #endregion
 
         #region 方法

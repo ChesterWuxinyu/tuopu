@@ -415,6 +415,45 @@ namespace Whf.TuoPu.DAL
         }
         #endregion
 
+        #region 查询返回单个值
+        public string ExecuteScalar(string Sql)
+        {
+            return this.ExecuteScalar(Sql, CommandType.Text, new string[0], new object[0]);
+        }
+
+        public string ExecuteScalar(string Sql, CommandType sqlType, string sqlParam, object paramValue)
+        {
+            //把参数变量转换成数组,再调用已经实现的方法
+            string[] sqlParams = new string[1];
+            object[] paramValues = new object[1];
+            sqlParams[0] = sqlParam;
+            paramValues[0] = paramValue;
+
+            return this.ExecuteScalar(Sql, sqlType, sqlParams, paramValues);
+        }
+
+        public string ExecuteScalar(string Sql, CommandType sqlType, string[] sqlParams, object[] paramValues)
+        {
+            try
+            {
+                //准备好Command
+                SqlCommand cmd = new SqlCommand();
+                this.PrepareCommand(cmd, Sql, sqlType, sqlParams, paramValues);
+
+                //添加sql语句执行时间
+                cmd.CommandTimeout = this.TimeOut;
+                return cmd.ExecuteScalar().ToString();
+            }
+            catch (System.Exception ex)
+            {
+                throw new Exception("SourceSQL:" + Sql + "  |  ProcessedSQL:" + Sql + "  |  ErrorMessage:" + ex.Message);
+            }
+            finally
+            {
+            }
+        }
+        #endregion
+
         #region 分页查询
         /// <summary>
         /// 分页查询
