@@ -24,3 +24,6 @@ F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.GetD
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.Properties.Resources.resources
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
 F:\StudySpace\tuopu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Tools\bin\Debug\Whf.TuoPu.Tools.exe.config
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.exe
+F:\WorkSpace\TuoPu\Whf.TuoPu\Whf.TuoPu.Tools\obj\x86\Debug\Whf.TuoPu.Tools.pdb

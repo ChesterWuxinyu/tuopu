@@ -22,6 +22,7 @@ body{background-repeat: no-repeat;padding: 0px;overflow: auto;font-family: ËÎÌו,
 .TextBoxMain160{height: 20px;border: #ababab 1px solid;font-size: 12px;text-align: left;width: 160px;margin-left: 10px;}
 .TextBoxMain300{height: 20px;border: #ababab 1px solid;font-size: 12px;text-align: left;width: 300px;margin-left: 10px;}
 /*Button*/
+.GVButtonEdit{border: 0px;background-image: url(../images/icons/edit.gif);cursor: pointer; width:20px; background-repeat: no-repeat;text-align: center;}
 .ButtonMain{width: 80px;height: 23px;border: 0px;border-style: solid;background-repeat: no-repeat;background-image: url(../images/button_bg_80.gif);
     font-size: 12px;font-family: verdana;text-align: center;cursor: pointer;}
 .LinkButtonPaging { font-size: 12px; color: #000000; }
