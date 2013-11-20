@@ -10,17 +10,35 @@ namespace Whf.TuoPu.Controller
 {
     public class PersonController
     {
+        #region 查询
+        public PersonEntity GetPersonInfo(string personID)
+        {
+            PersonEntity pe = new PersonEntity();
+            string strSql = @" SELECT  *  
+                                FROM    TBLPERSON where oid=@OID ";
+            string[] paramName = new string[1];
+            object[] paramValue = new object[1];
+            paramName[0] = "OID";
+
+            paramValue[0] = personID;
+            SqlDBBroker broker = new SqlDBBroker();
+            broker.Open();
+            DataSet dst = broker.ExecuteDataset(strSql, CommandType.Text, paramName, paramValue);
+            broker.Close();
+            if (dst != null && dst.Tables[0] != null && dst.Tables[0].Rows.Count > 0)
+            {
+                return this.DataRow2Person(dst.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public PersonEntity GetPersonInfo(string userName, string passWord)
         {
             PersonEntity pe = new PersonEntity();
-            string strSql = @" SELECT  oid ,
-                                        personaccount ,
-                                        personname ,
-                                        personsex ,
-                                        personofficephone ,
-                                        personmobilephone ,
-                                        personemail ,
-                                        personmemo,personstatus,persontype 
+            string strSql = @" SELECT  * 
                                 FROM    TBLPERSON where personaccount=@UserName and personpassword=@PassWord";
             string[] paramName=new string[2];
             object[] paramValue = new object[2];
@@ -95,5 +113,6 @@ namespace Whf.TuoPu.Controller
             broker.Close();
             return dst;
         }
+        #endregion
     }
 }

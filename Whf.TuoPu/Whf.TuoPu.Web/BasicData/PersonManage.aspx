@@ -6,9 +6,10 @@
 <head runat="server">
     <title>PersonManage</title>
     <link href="../css/adminCss.css" rel="stylesheet" type="text/css" />
+    <script src="../Script/Function.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript">
         function AddPerson() {
-            var returnValue = showdialog("Editperson.aspx", 400, 300);
+            var returnValue = showdialog("Editperson.aspx", 500, 430);
             if (returnValue = 'ok') {
                 document.getElementById("<%=btnRefresh.ClientID %>").click();
             }
@@ -16,7 +17,7 @@
 
         function EditPerson(personid) {
             alert(personid);
-            var returnValue = showdialog("Editperson.aspx?PersonID=" + personid, 400, 300);
+            var returnValue = showdialog("Editperson.aspx?PersonID=" + personid, 500, 430);
             if (returnValue = 'ok') {
                 document.getElementById("<%=btnRefresh.ClientID %>").click();
             }
@@ -97,7 +98,7 @@
         </tr>
         <tr>
             <td class="TDOperate">
-                <asp:Button ID="btnAdd" runat="server" Text="新增" CssClass="ButtonMain" />
+                <asp:Button ID="btnAdd" runat="server" Text="新增" OnClientClick="AddPerson();" CssClass="ButtonMain" />
                 <asp:Button ID="btnDelete" runat="server" Text="删除" CssClass="ButtonMain" />
                 <asp:Button ID="btnImport" runat="server" Text="导入Excel" CssClass="ButtonMain" />
                 <asp:Button ID="btnExport" runat="server" Text="导出Excel" CssClass="ButtonMain" />

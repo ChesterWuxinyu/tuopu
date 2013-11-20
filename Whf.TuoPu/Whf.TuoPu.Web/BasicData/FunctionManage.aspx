@@ -6,7 +6,6 @@
 <head runat="server">
     <title>function</title>
     <link href="../css/adminCss.css" rel="stylesheet" type="text/css" />
-    <script src="../Script/Function.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">

@@ -54,6 +54,7 @@ namespace Whf.TuoPu.Web.BasicData
                     txtFuncOrder.Text = fun.FUNCTIONORDER.ToString();
                     txtFuncUrl.Text = fun.FUNCTIONURL;
                     txtFuncLevel.Text = fun.FUNCTIONLEVEL.ToString();
+                    drpFuncStatus.SelectedValue = fun.FUNCTIONSTATUS.ToString();
                 }
             }
         }

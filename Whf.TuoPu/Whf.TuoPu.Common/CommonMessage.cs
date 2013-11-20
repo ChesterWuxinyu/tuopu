@@ -10,6 +10,9 @@ namespace Whf.TuoPu.Common
         #region EnumText
         public const string EnableStatus = "启用";
         public const string DisableStatus = "禁用";
+
+        public const string Female = "女";
+        public const string Male = "男";
         #endregion
 
         #region AlertMessage

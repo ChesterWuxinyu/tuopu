@@ -8,10 +8,9 @@
 //------------------------------------------------------------------------------
 
 namespace Whf.TuoPu.Web.BasicData {
-
-
-    public partial class Editperson
-    {
+    
+    
+    public partial class Editperson {
         
         /// <summary>
         /// form1 控件。
@@ -32,76 +31,175 @@ namespace Whf.TuoPu.Web.BasicData {
         protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
-        /// lblFuncName 控件。
+        /// lblPersonAccount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFuncName;
+        protected global::System.Web.UI.WebControls.Label lblPersonAccount;
         
         /// <summary>
-        /// txtFuncName 控件。
+        /// txtPersonAccount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFuncName;
+        protected global::System.Web.UI.WebControls.TextBox txtPersonAccount;
         
         /// <summary>
-        /// lblFuncLevel 控件。
+        /// lblPersonName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFuncLevel;
+        protected global::System.Web.UI.WebControls.Label lblPersonName;
         
         /// <summary>
-        /// drpLevel 控件。
+        /// txtPersonName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpLevel;
+        protected global::System.Web.UI.WebControls.TextBox txtPersonName;
         
         /// <summary>
-        /// lblFuncUrl 控件。
+        /// lblPersonSex 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFuncUrl;
+        protected global::System.Web.UI.WebControls.Label lblPersonSex;
         
         /// <summary>
-        /// txtFuncUrl 控件。
+        /// drpPersonSex 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFuncUrl;
+        protected global::System.Web.UI.WebControls.DropDownList drpPersonSex;
         
         /// <summary>
-        /// lblFuncMemo 控件。
+        /// lblPersonType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFuncMemo;
+        protected global::System.Web.UI.WebControls.Label lblPersonType;
         
         /// <summary>
-        /// txtFuncMemo 控件。
+        /// drpPersonType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFuncMemo;
+        protected global::System.Web.UI.WebControls.DropDownList drpPersonType;
+        
+        /// <summary>
+        /// lblPersonStatus 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPersonStatus;
+        
+        /// <summary>
+        /// drpPersonStatus 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpPersonStatus;
+        
+        /// <summary>
+        /// lblOfficePhone 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOfficePhone;
+        
+        /// <summary>
+        /// txtOfficePhone 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOfficePhone;
+        
+        /// <summary>
+        /// lblMobilPhone 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMobilPhone;
+        
+        /// <summary>
+        /// txtMobilPhone 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMobilPhone;
+        
+        /// <summary>
+        /// lblEmail 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmail;
+        
+        /// <summary>
+        /// txtEmail 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// lblPersonMemo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPersonMemo;
+        
+        /// <summary>
+        /// txtPersonMemo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPersonMemo;
+        
+        /// <summary>
+        /// hdfPersonID 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdfPersonID;
         
         /// <summary>
         /// btnAdd 控件。

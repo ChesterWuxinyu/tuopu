@@ -50,7 +50,7 @@ namespace Whf.TuoPu.Common
     }
 
     /// <summary>
-    /// 人员状态
+    /// 状态
     /// </summary>
     public enum CommonStatus
     { 
