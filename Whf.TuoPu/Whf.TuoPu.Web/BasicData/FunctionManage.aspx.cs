@@ -25,9 +25,12 @@ namespace Whf.TuoPu.Web.BasicData
 
         protected override void OnInit(EventArgs e)
         {
+            this.btnDelete.Attributes.Add("onclick", string.Format("return ConfirmDelete('{0}');",CommonMessage.ConfirmDelete));
             this.btnQuery.Click += new EventHandler(btnQuery_Click);
             this.tvMenu.SelectedNodeChanged += new EventHandler(tvMenu_SelectedNodeChanged);
             this.btnAdd.Click += new EventHandler(btnAdd_Click);
+            this.btnSave.Click += new EventHandler(btnSave_Click);
+            this.btnDelete.Click += new EventHandler(btnDelete_Click);
             base.OnInit(e);
         }
 
@@ -43,6 +46,7 @@ namespace Whf.TuoPu.Web.BasicData
                 FunctionEntity fun = new FunctionController().GetFunc(selectedNode.Value);
                 if (fun != null)
                 {
+                    hfParentOID.Value = selectedNode.Value;
                     hdfOID.Value = selectedNode.Value;
                     txtFuncCode.Text = fun.FUNCTIONKEY;
                     txtFuncMemo.Text = fun.MEMO;
@@ -71,8 +75,17 @@ namespace Whf.TuoPu.Web.BasicData
             }
             else if (selectedNode.Value != null)
             {
+                this.btnSave.Visible = true;
                 this.ClearAllControls();
-                txtFuncLevel.Text = (Convert.ToInt32(txtFuncLevel.Text) + 1).ToString();
+                FunctionEntity fun = new FunctionController().GetFunc(selectedNode.Value);
+                if (fun == null)
+                {
+                    txtFuncLevel.Text = "1";
+                }
+                else
+                {
+                    txtFuncLevel.Text = (Convert.ToInt32(txtFuncLevel.Text) + 1).ToString();
+                }
                 txtFuncOrder.Text = new FunctionController().GetChildMaxOrder(selectedNode.Value);
             }
         }
@@ -87,6 +100,10 @@ namespace Whf.TuoPu.Web.BasicData
             this.txtFuncUrl.Text = "";
         }
 
+        /// <summary>
+        /// 验证保存
+        /// </summary>
+        /// <returns></returns>
         private bool CheckSave()
         {
             bool returnValue = true;
@@ -115,10 +132,88 @@ namespace Whf.TuoPu.Web.BasicData
             {
                 errorMsg += "菜单地址长度不能超过100！";
             }
-            if (base.CheckInteger(txtFuncOrder.Text.Trim()))
+            if (!base.CheckInteger(txtFuncOrder.Text.Trim()))
             {
                 errorMsg += "菜单顺序必须是数字！";
             }
+            if (!string.IsNullOrEmpty(errorMsg))
+            {
+                returnValue = false;
+                base.ShowMessage(errorMsg);
+            }
+            return returnValue;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (CheckSave())
+            {
+                bool retValue = true;
+                FunctionController controler = new FunctionController();
+                FunctionEntity fun = new FunctionEntity();
+                fun.OID = hdfOID.Value;
+                fun.FUNCTIONPARENTID = hfParentOID.Value;
+                fun.FUNCTIONKEY = txtFuncCode.Text.Trim();
+                fun.FUNCTIONLEVEL = Convert.ToInt32(txtFuncLevel.Text.Trim());
+                fun.FUNCTIONNAME = txtFuncName.Text.Trim();
+                fun.FUNCTIONORDER = Convert.ToInt32(txtFuncOrder.Text.Trim());
+                fun.FUNCTIONSTATUS = drpFuncStatus.SelectedValue;
+                fun.FUNCTIONTYPE = 0;
+                fun.FUNCTIONURL = txtFuncUrl.Text.Trim();
+                fun.MEMO = txtFuncMemo.Text.Trim();
+                fun.CUSER = AppCenter.CurrentPersonAccount;
+                fun.MUSER = AppCenter.CurrentPersonAccount;
+                if (string.IsNullOrEmpty(fun.OID))
+                {
+                    fun.OID = Guid.NewGuid().ToString();
+                    retValue = controler.InsertFunction(fun);
+                }
+                else
+                {
+                    retValue = controler.UpdateFunction(fun);
+                }
+                if (retValue)
+                {
+                    base.ShowMessage(CommonMessage.SaveSuccess);
+                    this.ClearAllControls();
+                    this.BindTree();
+                }
+                else
+                {
+                    base.ShowMessage(CommonMessage.SaveFailed);
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            TreeNode selectedNode = this.tvMenu.SelectedNode;
+            if (selectedNode == null)
+            {
+                base.ShowMessage("请选择要删除的菜单！");
+                return;
+            }
+            else if (selectedNode.Value != null)
+            {
+                if (selectedNode.Value == "0")
+                {
+                    base.ShowMessage("根节点不能删除！");
+                    return;
+                }
+                List<string> lstOIDs = new List<string>();
+                lstOIDs.Add(selectedNode.Value);
+                if (new FunctionController().DeleteFunction(lstOIDs))
+                {
+                    base.ShowMessage(CommonMessage.DeleteSuccess);
+                    this.ClearAllControls();
+                    this.BindTree();
+                }
+                else
+                {
+                    base.ShowMessage(CommonMessage.DeleteFailed);
+                }
+            }
+            
         }
         #endregion
 
@@ -139,6 +234,7 @@ namespace Whf.TuoPu.Web.BasicData
 
         private void BindTree()
         {
+            this.tvMenu.Nodes.Clear();
             FunctionController controller = new FunctionController();
             DataSet dstMenu = controller.QueryFunctions(this.txtQueryFunCode.Text.Trim(), this.txtQueryFunName.Text.Trim());
             TreeNode node = new TreeNode();
@@ -150,6 +246,7 @@ namespace Whf.TuoPu.Web.BasicData
             {
                 this.BindChildNode(dstMenu, node);
             }
+            this.tvMenu.ExpandAll();
         }
 
         private void BindChildNode(DataSet dstMenu, TreeNode parNode)

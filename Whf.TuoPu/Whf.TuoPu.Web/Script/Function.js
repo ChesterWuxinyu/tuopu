@@ -11,5 +11,7 @@ function winclose(val)
     window.close();
 }
 
-
+function ConfirmDelete(msg) {
+    return window.confirm(msg);
+}
 

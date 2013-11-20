@@ -15,6 +15,9 @@ namespace Whf.TuoPu.Common
         #region AlertMessage
         public const string SaveSuccess = "保存成功！";
         public const string SaveFailed = "保存失败！";
+        public const string ConfirmDelete = "确定要删除吗？";
+        public const string DeleteSuccess = "删除成功！";
+        public const string DeleteFailed = "删除失败！";
         #endregion
     }
 }

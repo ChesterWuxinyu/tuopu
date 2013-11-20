@@ -6,6 +6,22 @@
 <head runat="server">
     <title>PersonManage</title>
     <link href="../css/adminCss.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        function AddPerson() {
+            var returnValue = showdialog("Editperson.aspx", 400, 300);
+            if (returnValue = 'ok') {
+                document.getElementById("<%=btnRefresh.ClientID %>").click();
+            }
+        }
+
+        function EditPerson(personid) {
+            alert(personid);
+            var returnValue = showdialog("Editperson.aspx?PersonID=" + personid, 400, 300);
+            if (returnValue = 'ok') {
+                document.getElementById("<%=btnRefresh.ClientID %>").click();
+            }
+        }
+    </script>
 </head>
 <body style="margin: 0">
     <form id="form1" runat="server">
@@ -43,7 +59,7 @@
         <tr>
             <td class="TDMain">
                 <div class="DivGridView">
-                    <asp:GridView CssClass="gridview_list" ID="gvTest" AutoGenerateColumns="false" runat="server"
+                    <asp:GridView CssClass="gridview_list" ID="gvPerson" AutoGenerateColumns="false" runat="server"
                         BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3"
                         CellSpacing="1" GridLines="None">
                         <Columns>
@@ -51,9 +67,9 @@
                                 <HeaderStyle HorizontalAlign="Center" Height="25px" Width="45px" />
                                 <ItemTemplate>
                                     <asp:CheckBox ID="ckb" runat="server" />
+                                    <asp:HiddenField ID="hdfOID" runat="server" Value='<%# Bind("oid") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:BoundField Visible="false" DataField="oid" HeaderText="" />
                             <asp:BoundField DataField="personaccount" HeaderText="员工账号" />
                             <asp:BoundField DataField="personname" HeaderText="员工姓名" />
                             <asp:BoundField DataField="personsex" HeaderText="员工性别" />
@@ -63,8 +79,9 @@
                             <asp:BoundField DataField="personmemo" HeaderText="备注信息" />
                             <asp:TemplateField HeaderText="编辑">
                                 <ItemTemplate>
-                                    <asp:Button ID="btnEdit" CssClass="GVButtonEdit" runat="server"></asp:Button>
+                                    <asp:Button ID="btnEdit" CssClass="GVButtonEdit" OnClientClick="" runat="server"></asp:Button>
                                 </ItemTemplate>
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
                         </Columns>
                         <HeaderStyle CssClass="gridview_header" />
@@ -81,9 +98,15 @@
         <tr>
             <td class="TDOperate">
                 <asp:Button ID="btnAdd" runat="server" Text="新增" CssClass="ButtonMain" />
+                <asp:Button ID="btnDelete" runat="server" Text="删除" CssClass="ButtonMain" />
+                <asp:Button ID="btnImport" runat="server" Text="导入Excel" CssClass="ButtonMain" />
+                <asp:Button ID="btnExport" runat="server" Text="导出Excel" CssClass="ButtonMain" />
             </td>
         </tr>
     </table>
+    <div style="display:none">
+        <asp:Button ID="btnRefresh" runat="server" />
+    </div>
     </form>
 </body>
 </html>

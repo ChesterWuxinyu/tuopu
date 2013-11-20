@@ -21,7 +21,7 @@
                 <table class="TableMain" cellpadding="0" cellspacing="0">
                     <tr>
                         <td class="TDLabel">
-                            <asp:Label ID="lblQueryFunCode" CssClass="LabelTitle" Text="菜单编码" runat="server"></asp:Label>
+                            <asp:Label ID="lblQueryFunCode" CssClass="LabelTitle" Text="菜单代码" runat="server"></asp:Label>
                         </td>
                         <td class="TDValue">
                             <asp:TextBox ID="txtQueryFunCode" CssClass="TextBoxMain160" runat="server">
