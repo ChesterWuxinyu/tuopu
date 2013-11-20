@@ -86,6 +86,40 @@ namespace Whf.TuoPu.Web.BasicData
             this.txtFuncOrder.Text = "";
             this.txtFuncUrl.Text = "";
         }
+
+        private bool CheckSave()
+        {
+            bool returnValue = true;
+            string errorMsg = string.Empty;
+            if (string.IsNullOrEmpty(txtFuncCode.Text.Trim()))
+            {
+                errorMsg += "菜单编码不能为空！";
+            }
+            else if (txtFuncCode.Text.Trim().Length > 40)
+            {
+                errorMsg +="菜单编码长度不能超过40！";
+            }
+            if (string.IsNullOrEmpty(txtFuncName.Text.Trim()))
+            {
+                errorMsg += "菜单名称不能为空！";
+            }
+            if (txtFuncName.Text.Length>40)
+            {
+                errorMsg += "菜单名称长度不能超过40！";
+            }
+            if (!string.IsNullOrEmpty(this.txtFuncMemo.Text.Trim()) && this.txtFuncMemo.Text.Length>100)
+            {
+                errorMsg += "菜单说明长度不能超过100！";
+            }
+            if (!string.IsNullOrEmpty(this.txtFuncUrl.Text.Trim()) && this.txtFuncUrl.Text.Length > 100)
+            {
+                errorMsg += "菜单地址长度不能超过100！";
+            }
+            if (base.CheckInteger(txtFuncOrder.Text.Trim()))
+            {
+                errorMsg += "菜单顺序必须是数字！";
+            }
+        }
         #endregion
 
         #region 方法
