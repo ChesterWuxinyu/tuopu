@@ -39,7 +39,7 @@
                                                     &nbsp;
                                                 </td>
                                                 <td align="right" style="font-size: 12px; font-family: verdana; width: 80;">
-                                                    用户名：
+                                                    用户名：111
                                                 </td>
                                                 <td width="460px" height="34" style="font-size: 12">
                                                     <asp:TextBox ID="txtUserName" Text="SysAdmin" Style="width: 140px;" size="19" MaxLength="16" runat="server"
